@@ -1,0 +1,126 @@
+<?php
+include "dbconnect.php";
+
+if(isset($_POST['sub'])){
+
+   
+
+    $name    =  $_POST["name"];
+    $mail    =  $_POST["email"];
+    $subject =  $_POST["subject"];
+    $message =  $_POST["Message"];
+    $mobile  =  $_POST["mobile"];
+
+    $query = "INSERT INTO `hostel` ( `Name`, `Mail`, `Subject`, `mobile no`,`Message`, `DT`) VALUES ( '$name', '$mail', '$subject', '$mobile','$message', current_timestamp())";
+    $result = mysqli_query($conn,$query);
+
+}   
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>university Website Design - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+<body>
+    
+    <section class="sub-header">
+        <nav>
+            <a href="index.php"><img src="images/logo04.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                <ul>
+                <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.php">ABOUT</a></li>
+                    <li><a href="course.php">KEYPOINTS</a></li>
+                    <li><a href="blog.php">BLOG</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+      
+        <h1>Contact us</h1>
+
+    </section>
+
+    <!-------contact us----->
+
+      <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60606.236049326566!2d73.96868785429712!3d17.007035481750773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x150c32cc9d061111!2zMTfCsDAwJzMxLjAiTiA3M8KwNTgnNTMuMCJF!5e0!3m2!1sen!2sin!4v1647689585564!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </section> 
+     
+      <section class="contact-us">
+
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>Sahyadri vasatigruh, Warana colony</h5>
+                        <p>Kokarud, Maharashtra,IN</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+91 9763191815,7709126462</h5>
+                        <p>Monday to Sunday, 10Am to 8PM</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-open"></i>
+                    <span>
+                        <h5>SVVkokarud@gmail.com</h5>
+                        <p>Email us your query</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+
+                <form action="contact.php" method="post">
+                    <input type="text" name="name" placeholder="Enter Your Name" required>
+                    <input type="email" name="email" placeholder="Enter Your mail" required>
+                    <input type="text" name="subject" placeholder="Enter Your subject" required>
+                    <input type="tel" name="mobile" placeholder="Enter Your mobile no" required>
+                    <textarea rows="8" name="Message" placeholder="Message" required></textarea>
+                    <button type="submit" name="sub" class="hero-btn red-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+      </section>
+    
+
+      <!---------Footer--------->
+
+      <section class="footer">
+          <h4>About Us</h4>
+          <p>परम पूज्य स्वामी विवेकानंद सेवाश्रम संस्था, शिराळा यांचे सह्याद्री विद्यार्थी वस्तीगृह कोकरूड<br>
+            हे गरीब होतकरू विद्यार्थ्यांना शैक्षणिक वाटचाल करून देत आहे.
+          </p>
+          <p>made by Somnath Patil.</p>
+          </div>
+      </section>
+
+
+
+    <!------javascript for toggle------->
+<script>
+       var navLinks = document.getElementById("navLinks")
+
+       function showMenu(){
+           navLinks.style.right = "0";
+        }
+        function hideMenu(){
+           navLinks.style.right = "-200px";
+        }
+</script>
+
+</body>
+</html>
