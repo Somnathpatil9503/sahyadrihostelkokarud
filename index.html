@@ -9,6 +9,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+    <style>
+        /* Rotating news ticker styles */
+        .ticker-wrapper {
+            background-color: #ffffff;
+            color: #ff0000 ;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            margin-top: 10px;
+        }
+        .ticker {
+            display: inline-block;
+            animation: tickerMove 10s linear infinite;
+        }
+        @keyframes tickerMove {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+
 </head>
 <body>
     
@@ -26,7 +53,16 @@
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-      
+
+        <!----new tickler--->
+
+        <div class="ticker-wrapper">
+            <div class="ticker">
+                Latest News: Admissions Open for 2024 | Scholarships Available for Meritorious Students | Upcoming Webinar on Career Guidance
+            </div>
+        </div>
+        <!------->
+
         <div class="text-box">
             <h1> सह्याद्री विद्यार्थी वसतिगृह, कोकरूड</h1>
             <p>
@@ -102,19 +138,18 @@
         <div class="row">
             <div class="facilities-col">
                 <img src="images/library01.jpg">
-                <h3>
-                    पुस्तकालय</h3>
+                <h3>Library</h3>
                 <p>माझी लायब्ररी, माझी जीवनरेखा. आपले जग उघडा. ज्ञानाचे द्वार उघडणे. भूतकाळ जतन करणे, भविष्य उघडणे. </p>
             </div>
             <div class="facilities-col">
                 <img src="images/playground.jpg">
-                <h3>खेळाचे मैदान</h3>
+                <h3>Play Ground</h3>
                 <p> तुमच्या आवडीचे खेळ खेळा! तुमच्या कॅटलॉगमध्ये खेळांना योग्य स्थान द्या! एक निरोगी मन मजबूत शरीरात वसते, म्हणून खेळ खेळा! खेळ तुम्हाला सांघिक भावना वाढवण्यास मदत करतात! </p>
             </div>
             <div class="facilities-col">
-                <img src="images/computer2.jpg">
-                <h3>संगणक कक्ष</h3>
-                <p> संगणक विद्यार्थ्यांना जगाबद्दल जाणून घेण्यास आणि त्यात काय चालले आहे हे जाणून घेण्यास मदत करतात. हे त्यांना भविष्यात उत्कृष्ट नोकऱ्यांचे ध्येय ठेवण्यास आणि त्यात यशस्वी होण्यास मदत करते. संगणक हे जगभरातील शिक्षणाचे मानक बनले आहे. </p>
+                <img src="images/cafeteria.png">
+                <h3>Tasty and Healthy Food</h3>
+                <p> निरोगी खा, चांगले जगा. </p>
             </div>
         </div>
 
@@ -124,7 +159,7 @@
     <!------testimonials----->
 
     <section class="testimonials">
-        <h1> आमचे विद्यार्थी काय म्हणतात....</h1>
+        <h1> आमचा विद्यार्थी काय म्हणतो....</h1>
         <p> </p>
 
         <div class="row">
